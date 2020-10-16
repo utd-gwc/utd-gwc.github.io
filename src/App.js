@@ -11,6 +11,8 @@ import {
   Image,
 } from "grommet";
 
+import logo from "./static/gwc2020_website_logo_nobg.png";
+
 const font = {
   font: {
     family: "Roboto",
@@ -91,11 +93,16 @@ function App() {
   return (
     <Grommet theme={isLightMode ? lightTheme : darkTheme} full>
       <Main>
-        <Header pad={{ left: "medium", right: "small", vertical: "small" }}>
-          <Heading level="3" margin="none">
-            UTD Girls Who Code
-          </Heading>
-          <Box justify="between" align="center">
+        <Header pad={{ left: "medium", right: "small", vertical: "small" }} elevation="xsmall">
+          <Box align="center" height="xsmall" >
+            <Image
+              src={logo}
+              fit="contain"
+              fill="vertical"
+              a11yTitle="UTD Girls Who Code logo"
+            />
+          </Box>
+          <Box justify="between" fill="horizontal" align="end">
             <CheckBox
               toggle
               onChange={() => {
