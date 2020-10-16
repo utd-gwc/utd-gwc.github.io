@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grommet, Heading, Main, CheckBox, Paragraph } from "grommet";
+import { Box, Grommet, Heading, Main, CheckBox, Paragraph, Header } from "grommet";
 
 const font = {
   font: {
@@ -8,6 +8,17 @@ const font = {
     height: "20px",
   },
 };
+
+const checkBox = {
+  checkBox : {
+    border : {
+      color : {
+        "dark": "neutral-1",
+        "light": "neutral-1"
+      }
+    }
+  }
+}
 
 const lightTheme = {
   global: {
@@ -20,12 +31,14 @@ const lightTheme = {
       "accent-3": "#FCC0C5",
       "neutral-3": "#B67186",
       "neutral-4": "#B84C65",
-      active: "accent-3",
-      focus: "accent-1",
+      active: "neutral-4",
+      focus: "neutral-1",
       white: "#ECEDF8",
+      "background": "#ECEDF8"
     },
     ...font,
   },
+  ...checkBox
 };
 
 const darkTheme = {
@@ -39,34 +52,22 @@ const darkTheme = {
       "accent-3": "#FFFFFF",
       "neutral-3": "#ECEDF8",
       "neutral-4": "#1B3A5D",
-      active: "accent-1",
-      focus: "accent-1",
+      active: "neutral-3",
+      focus: "neutral-1",
       white: "#ECEDF8",
+      "background": "#1B3A5D"
     },
     ...font,
   },
+  ...checkBox
 };
-
-const AppBar = (props) => (
-  <Box
-    tag="header"
-    direction="row"
-    align="center"
-    justify="between"
-    background="brand"
-    pad={{ left: "medium", right: "small", vertical: "small" }}
-    elevation="medium"
-    style={{ zIndex: "1" }}
-    {...props}
-  />
-);
 
 function App() {
   const [isLightMode, setIsLightMode] = React.useState(true);
   return (
     <Grommet theme={isLightMode ? lightTheme : darkTheme} full>
       <Main>
-        <AppBar>
+        <Header pad={{ left: "medium", right: "small", vertical: "small"}}>
           <Heading level="3" margin="none">
             UTD Girls Who Code!
           </Heading>
@@ -80,11 +81,8 @@ function App() {
                 setIsLightMode(!isLightMode);
               }}
             />
-            <Paragraph level="4" margin="none" >
-              {isLightMode ? "Dark Mode" : "Light Mode"}
-            </Paragraph>
           </Box>
-        </AppBar>
+        </Header>
       </Main>
     </Grommet>
   );
