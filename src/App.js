@@ -1,5 +1,15 @@
 import React from "react";
-import { Box, Grommet, Heading, Main, CheckBox, Paragraph, Header } from "grommet";
+import {
+  Box,
+  Grommet,
+  Heading,
+  Main,
+  CheckBox,
+  Stack,
+  Header,
+  Text,
+  Image,
+} from "grommet";
 
 const font = {
   font: {
@@ -10,15 +20,29 @@ const font = {
 };
 
 const checkBox = {
-  checkBox : {
-    border : {
-      color : {
-        "dark": "neutral-1",
-        "light": "neutral-1"
-      }
-    }
-  }
-}
+  checkBox: {
+    border: {
+      color: {
+        dark: "neutral-1",
+        light: "neutral-1",
+      },
+    },
+    hover: {
+      border: {
+        color: {
+          dark: "white",
+          light: "brand",
+        },
+      },
+    },
+    toggle: {
+      background: {
+        dark: "neutral-1",
+        light: "neutral-1",
+      },
+    },
+  },
+};
 
 const lightTheme = {
   global: {
@@ -34,11 +58,11 @@ const lightTheme = {
       active: "neutral-4",
       focus: "neutral-1",
       white: "#ECEDF8",
-      "background": "#ECEDF8"
+      background: "#ECEDF8",
     },
     ...font,
   },
-  ...checkBox
+  ...checkBox,
 };
 
 const darkTheme = {
@@ -55,11 +79,11 @@ const darkTheme = {
       active: "neutral-3",
       focus: "neutral-1",
       white: "#ECEDF8",
-      "background": "#1B3A5D"
+      background: "#1B3A5D",
     },
     ...font,
   },
-  ...checkBox
+  ...checkBox,
 };
 
 function App() {
@@ -67,14 +91,11 @@ function App() {
   return (
     <Grommet theme={isLightMode ? lightTheme : darkTheme} full>
       <Main>
-        <Header pad={{ left: "medium", right: "small", vertical: "small"}}>
+        <Header pad={{ left: "medium", right: "small", vertical: "small" }}>
           <Heading level="3" margin="none">
-            UTD Girls Who Code!
+            UTD Girls Who Code
           </Heading>
-          <Box
-            justify="between"
-            align="center"
-          >
+          <Box justify="between" align="center">
             <CheckBox
               toggle
               onChange={() => {
