@@ -1,32 +1,18 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import {
   Box,
   Grommet,
   Heading,
   Main,
   CheckBox,
-  Stack,
   Header,
-  Text,
-  Image,
-  defaultProps,
 } from "grommet";
+import Logo from "./components/Logo.js";
 import useComponentScroll from "./hooks/useComponentScroll.js";
 import { lightTheme, darkTheme } from "./hooks/useGWCTheme.js";
 
-import logo from "./static/gwc2020_website_logo_nobg.png";
-
 function App() {
-  const [isLightMode, setIsLightMode] = React.useState(true);
-
-  const GLOBAL_SIZE_XSMALL = defaultProps.theme.global.size.xsmall.match(
-    /\d+/
-  )[0];
-  const GLOBAL_SIZE_XXSMALL = defaultProps.theme.global.size.xxsmall.match(
-    /\d+/
-  )[0];
-
-  // set default value
+  const [isLightMode, setIsLightMode] = useState(true);
   const [scrollTop, setScrollTop] = useState(document.body.scrollTop);
 
   const handleOnScroll = (e) => {
@@ -42,20 +28,7 @@ function App() {
           pad={{ left: "medium", right: "small", vertical: "small" }}
           elevation="xsmall"
         >
-          <Box
-            align="center"
-            height={
-              Math.max(GLOBAL_SIZE_XSMALL - scrollTop, GLOBAL_SIZE_XXSMALL) +
-              "px"
-            }
-          >
-            <Image
-              src={logo}
-              fit="contain"
-              fill="vertical"
-              a11yTitle="UTD Girls Who Code logo"
-            />
-          </Box>
+          <Logo scrollTop={scrollTop} />
           <Box justify="between" fill="horizontal" align="end">
             <CheckBox
               toggle
@@ -65,7 +38,6 @@ function App() {
             />
           </Box>
         </Header>
-        <Heading>{scrollTop}</Heading>
         <Box overflow="auto" ref={innerRef}>
           {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map(() => {
             return (
