@@ -1,13 +1,7 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Grommet,
-  Heading,
-  Main,
-  CheckBox,
-  Header,
-} from "grommet";
+import { Box, Grommet, Heading, Main, CheckBox, Header } from "grommet";
 import Logo from "./components/Logo.js";
+import Body from "./components/Body.js";
 import useComponentScroll from "./hooks/useComponentScroll.js";
 import { lightTheme, darkTheme } from "./hooks/useGWCTheme.js";
 
@@ -28,7 +22,7 @@ function App() {
           pad={{ left: "medium", right: "small", vertical: "small" }}
           elevation="xsmall"
           background={scrollTop == 0 ? "background" : "neutral-3"}
-          style={{transition: "background-color .4s"}}
+          style={{ transition: "background-color .4s" }}
         >
           <Logo scrollTop={scrollTop} />
           <Box justify="between" fill="horizontal" align="end">
@@ -40,7 +34,7 @@ function App() {
             />
           </Box>
         </Header>
-        <Box overflow="auto" ref={innerRef}>
+        <Body innerRef={innerRef}>
           {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map(() => {
             return (
               <Heading level="1" margin="none">
@@ -48,7 +42,7 @@ function App() {
               </Heading>
             );
           })}
-        </Box>
+        </Body>
       </Main>
     </Grommet>
   );
