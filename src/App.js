@@ -27,6 +27,8 @@ function App() {
         <Header
           pad={{ left: "medium", right: "small", vertical: "small" }}
           elevation="xsmall"
+          background={scrollTop == 0 ? "background" : "neutral-3"}
+          style={{transition: "background-color .4s"}}
         >
           <Logo scrollTop={scrollTop} />
           <Box justify="between" fill="horizontal" align="end">
