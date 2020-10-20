@@ -12,7 +12,7 @@ import * as Icons from "grommet-icons";
 
 export default function EventCard(props) {
   return (
-    <Card height="medium" margin="medium" width="medium" background="accent-2" elevation="small">
+    <Card height="medium" margin="medium" width="medium" background="accent-2" elevation="medium">
       <CardHeader pad="small" margin="none" wrap>
         <Heading level="3" margin="none">
           {props.title}

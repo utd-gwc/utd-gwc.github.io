@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, Grommet, Heading, Main, CheckBox, Header } from "grommet";
 import Logo from "./components/Logo.js";
 import Body from "./components/Body.js";
-import EventCard from "./components/EventCard.js";
+import EventsSection from "./components/EventsSection.js";
 import useComponentScroll from "./hooks/useComponentScroll.js";
 import { lightTheme, darkTheme } from "./hooks/useGWCTheme.js";
 
@@ -36,23 +36,7 @@ function App() {
           </Box>
         </Header>
         <Body innerRef={innerRef}>
-          <Box width="large" fill="horizontal" height="large" direction="row-responsive">
-            <EventCard
-              title="Interviewing 101"
-              description="Yoooooooo"
-              date="03/20/20"
-            />
-            <EventCard
-              title="Interviewing 101"
-              description="Yoooooooo"
-              date="03/20/20"
-            />
-            <EventCard
-              title="Interviewing 101"
-              description="Yoooooooo"
-              date="03/20/20"
-            />
-          </Box>
+          <EventsSection />
         </Body>
       </Main>
     </Grommet>
