@@ -12,7 +12,7 @@ import * as Icons from "grommet-icons";
 
 export default function EventCard(props) {
   return (
-    <Card height="medium" margin="medium" width="medium" background="accent-2" elevation="medium">
+    <Card height="medium" margin="medium" width="medium" background="card-background" elevation="medium">
       <CardHeader pad="small" margin="none" wrap>
         <Heading level="3" margin="none">
           {props.title}
@@ -26,10 +26,10 @@ export default function EventCard(props) {
       </CardBody>
       <CardFooter
         pad={{ horizontal: "small" }}
-        background="accent-3"
+        background="card-footer"
       >
-        <Button icon={<Icons.DownloadOption color="brand" />} hoverIndicator />
-        <Button icon={<Icons.ShareOption color="brand" />} hoverIndicator />
+        <Button icon={<Icons.ShareOption color="icon-color" />} hoverIndicator />
+        <Button icon={<Icons.More color="icon-color" />} hoverIndicator />
       </CardFooter>
     </Card>
   );
