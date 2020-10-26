@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Box, Grommet, Main, CheckBox, Header } from "grommet";
+import { Box, Grommet, Main, CheckBox, Header, Heading } from "grommet";
 import Logo from "./components/Logo.js";
 import Body from "./components/Body.js";
+import Section from "./components/Section.js";
 import EventsSection from "./components/EventsSection.js";
 import useComponentScroll from "./hooks/useComponentScroll.js";
 import { lightTheme, darkTheme } from "./hooks/useGWCTheme.js";
@@ -36,7 +37,9 @@ function App() {
           </Box>
         </Header>
         <Body innerRef={innerRef}>
-          <EventsSection />
+          <Section title="Upcoming Events">
+            <EventsSection />
+          </Section>
         </Body>
       </Main>
     </Grommet>
