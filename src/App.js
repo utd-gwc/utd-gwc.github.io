@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Grommet, Heading, Main, CheckBox, Header } from "grommet";
+import { Box, Grommet, Main, CheckBox, Header } from "grommet";
 import Logo from "./components/Logo.js";
 import Body from "./components/Body.js";
 import EventsSection from "./components/EventsSection.js";

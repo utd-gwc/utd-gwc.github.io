@@ -17,6 +17,7 @@ export default function Logo({ scrollTop }) {
       height={
         Math.max(GLOBAL_SIZE_XSMALL - scrollTop, GLOBAL_SIZE_XXSMALL) + "px"
       }
+      style={{transition: "height .05s ease"}}
     >
       <Image
         src={logo}
