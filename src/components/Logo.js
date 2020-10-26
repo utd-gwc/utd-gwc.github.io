@@ -19,7 +19,7 @@ export default function Logo({ scrollTop }) {
         Math.max(GLOBAL_SIZE_XSMALL - scrollTop, GLOBAL_SIZE_XXSMALL) + "px"
       }
       style={{transition: "height .05s ease"}}
-      pad={{left: size=="small" ? "large" : "none"}}
+      pad={{left: size==="small" ? "large" : "none"}}
     >
       <Image
         src={logo}
