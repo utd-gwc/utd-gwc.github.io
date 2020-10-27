@@ -26,7 +26,7 @@ function App() {
           background={scrollTop === 0 ? "background" : "neutral-3"}
           style={{ transition: "background-color .4s" }}
         >
-          <Logo scrollTop={scrollTop} />
+          <Logo scrollTop={scrollTop} theme={isLightMode ? "light" : "dark"}/>
           <Box justify="between" fill="horizontal" align="end">
             <CheckBox
               toggle
