@@ -11,7 +11,7 @@ export default function EventsSection() {
   async function getEvents() {
     try {
       setLoadingEvents(true);
-      const res = await fetch(`https://utd-gwc-api.herokuapp.com/api/events`, {
+      const res = await fetch(`https://utd-gwc-api.herokuapp.com/api/events/upcoming?sort=+date`, {
         method: "GET",
       });
       const events = await res.json();
