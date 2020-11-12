@@ -7,6 +7,7 @@ import EventsSection from "./components/EventsSection.js";
 import CodeSnippet from "./components/CodeSnippet.js";
 import FeaturedEvent from "./components/FeaturedEvent.js";
 
+import FadeInComponent from "./components/FadeInComponent.js";
 import useComponentScroll from "./hooks/useComponentScroll.js";
 import { lightTheme, darkTheme } from "./hooks/useGWCTheme.js";
 
