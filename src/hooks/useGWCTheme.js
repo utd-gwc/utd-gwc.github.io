@@ -70,6 +70,11 @@ const lightTheme = {
       "card-background": "accent-2",
       "card-footer": "accent-3",
       "icon-color": "neutral-3",
+
+      "code-keyword": "neutral-3",
+      "code-variable": "neutral-1",
+      "code-function": "neutral-4",
+      "code-string": "accent-3"
     },
     ...font,
     ...elevation,
@@ -95,6 +100,11 @@ const darkTheme = {
       "card-background": "#224975",
       "card-footer": "accent-3",
       "icon-color": "brand",
+      
+      "code-keyword": "accent-2",
+      "code-variable": "neutral-1",
+      "code-function": "neutral-2",
+      "code-string": "accent-1"
     },
     ...font,
     ...elevation,
