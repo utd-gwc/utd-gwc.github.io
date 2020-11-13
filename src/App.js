@@ -42,7 +42,7 @@ function App() {
         </Header>
         <Body innerRef={innerRef}>
           <Box height={{min: "100vh"}} fill="vertical" direction="row-responsive" margin={{top: "large"}}>
-            <Box direction="column">
+            <Box direction="column" width="large">
               <CodeSnippet />
             </Box>
             <Box flex="grow" align="end" direction="column">

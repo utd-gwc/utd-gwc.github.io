@@ -21,7 +21,7 @@ const Code = ({ children, type, nospace }) => {
 export default function CodeSnippet() {
     return (
         <Typist cursor={{ show: false }}>
-            <Box margin={{ left: "medium" }} width="large" height="xlarge">
+            <Box margin={{ left: "medium" }}>
                 <div>
                     <Code type="keyword">const club</Code><Code type="variable">GWC</Code><Code>{"= () => {"}</Code>
                 </div>
