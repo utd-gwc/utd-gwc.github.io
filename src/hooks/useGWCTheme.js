@@ -74,7 +74,10 @@ const lightTheme = {
       "code-keyword": "neutral-3",
       "code-variable": "neutral-1",
       "code-function": "neutral-4",
-      "code-string": "accent-3"
+      "code-string": "accent-3",
+
+      "button-primary": "accent-3",
+      "button-hover": "accent-2",
     },
     ...font,
     ...elevation,
@@ -104,7 +107,10 @@ const darkTheme = {
       "code-keyword": "accent-2",
       "code-variable": "neutral-1",
       "code-function": "neutral-2",
-      "code-string": "accent-1"
+      "code-string": "accent-1",
+
+      "button-primary": "accent-3",
+      "button-hover": "accent-2",
     },
     ...font,
     ...elevation,

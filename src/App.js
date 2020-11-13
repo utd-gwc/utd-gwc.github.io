@@ -5,7 +5,7 @@ import Body from "./components/Body.js";
 import Section from "./components/Section.js";
 import EventsSection from "./components/EventsSection.js";
 import CodeSnippet from "./components/CodeSnippet.js";
-import FeaturedEvent from "./components/FeaturedEvent.js";
+import StayInTheLoop from "./components/StayInTheLoop.js";
 
 import useComponentScroll from "./hooks/useComponentScroll.js";
 import { lightTheme, darkTheme } from "./hooks/useGWCTheme.js";
@@ -41,12 +41,12 @@ function App() {
           </Box>
         </Header>
         <Body innerRef={innerRef}>
-          <Box flex="grow" height={{min: "100vh"}} fill="vertical" direction="row-responsive" >
+          <Box height={{min: "100vh"}} fill="vertical" direction="row-responsive" margin={{top: "large"}}>
             <Box direction="column">
               <CodeSnippet />
             </Box>
             <Box flex="grow" align="end" direction="column">
-              <FeaturedEvent />
+              <StayInTheLoop />
             </Box>
           </Box>
           <Section title="Upcoming Events">

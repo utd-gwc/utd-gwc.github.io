@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react';
 import './../styles/FadeInComponent.css';
 
-export default function FadeInComponent({children}) {
+export default function FadeInComponent({children, style}) {
   const [isVisible, setVisible] = useState(false);
 
   const domRef = useRef(null);
@@ -25,7 +25,7 @@ export default function FadeInComponent({children}) {
   }, []);
 
   return (
-    <div ref={ domRef } className={ `fade-in-section ${ isVisible ? 'is-visible' : '' }` }>
+    <div ref={ domRef } className={ `fade-in-section ${ isVisible ? 'is-visible' : '' }` } style={{...style}}>
       { children }
     </div>
   )

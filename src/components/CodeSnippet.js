@@ -21,47 +21,42 @@ const Code = ({ children, type, nospace }) => {
 export default function CodeSnippet() {
     return (
         <Typist cursor={{ show: false }}>
-            <Box>
-                <Code>
-                    <Code type="keyword">const club</Code><Code type="variable">GWC</Code>{"= () => {"}
-                </Code>
+            <Box margin={{ left: "medium" }} width="large" height="xlarge">
+                <div>
+                    <Code type="keyword">const club</Code><Code type="variable">GWC</Code><Code>{"= () => {"}</Code>
+                </div>
                 <Tab>
-                    <Code>
-                        <Code type="keyword">if</Code>{"( "}<Code type="function" nospace>viewing</Code>{"("}
-                        <Code type="variable" nospace>you</Code>{") == "}
-                        <Code type="keyword" nospace>this</Code>{"."}<Code type="variable">page</Code>{") {"}
-                    </Code>
+                    <div>
+                        <Code type="keyword">if</Code><Code>{"( "}</Code><Code type="function" nospace>viewing</Code>
+                        <Code>{"("}</Code><Code type="variable" nospace>you</Code><Code>{") == "}</Code>
+                        <Code type="keyword" nospace>this</Code><Code nospace>{"."}</Code><Code type="variable">page</Code>
+                        <Code>{") {"}</Code>
+                    </div>
                     <Tab>
-                        <Code>
-                            <Code type="function" nospace>print</Code>{"("}
-                            <Code type="string" nospace>"Welcome to UTD Girls Who Code!"</Code>{");"}
-                        </Code>
+                        <div>
+                            <Code type="function" nospace>print</Code><Code>{"("}</Code>
+                            <Code type="string" nospace>"Welcome to UTD Girls Who Code!"</Code><Code>{");"}</Code>
+                        </div>
                     </Tab>
-                    <Code>
-                        {"}"}
-                    </Code>
+                    <Code>{"}"}</Code>
                     <br />
-                    <Code>
-                        <Code type="keyword">let</Code><Code type="variable">goals</Code>{"= {"}
-                    </Code>
+                    <div>
+                        <Code type="keyword">let</Code><Code type="variable">goals</Code><Code>{"= {"}</Code>
+                    </div>
                     <Tab>
-                        <Code>
-                            <Code type="variable">"one"</Code>{": "}<Code type="function">build_sisterhood()</Code>{","}<br />
-                            <Code type="variable">"two"</Code>{": "}<Code type="function">empower_womxn()</Code>{","}<br />
-                            <Code type="variable">"three"</Code>{": "}<Code type="function">learn_technical_skills()</Code>{","}
-                        </Code>
+                        <div>
+                            <Code type="variable" nospace>"one"</Code><Code>{": "}</Code><Code type="function" nospace>build_sisterhood()</Code><Code>{","}</Code><br />
+                            <Code type="variable" nospace>"two"</Code><Code>{": "}</Code><Code type="function" nospace>empower_womxn()</Code><Code>{","}</Code><br />
+                            <Code type="variable" nospace>"three"</Code><Code>{": "}</Code><Code type="function" nospace>learn_technical_skills()</Code><Code>{","}</Code>
+                        </div>
                     </Tab>
-                    <Code>
-                        {"};"}
-                    </Code>
+                    <Code>{"};"}</Code>
                     <br />
-                    <Code>
-                        <Code type="keyword">return</Code><Code type="variable" nospace>goals</Code>{";"}
-                    </Code>
+                    <div>
+                        <Code type="keyword">return</Code><Code type="variable" nospace>goals</Code><Code>{";"}</Code>
+                    </div>
                 </Tab>
-                <Code>
-                    {"}"}
-                </Code>
+                <Code>{"}"}</Code>
             </Box>
         </Typist>
     )
