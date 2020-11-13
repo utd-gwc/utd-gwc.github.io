@@ -21,10 +21,10 @@ const GridGenerator = ({ cols, children, fullRow }) => {
     const rows = chunk(React.Children.toArray(children), fullRow ? (12 / dynamicCols) : cols)
     return (
         <Grid>
-            {rows.map((cols) => (
-                <Row>
-                    {cols.map((col) => (
-                        <Col sm={12} md={fullRow ? dynamicCols : colWidth}>
+            {rows.map((cols, index) => (
+                <Row key={index}>
+                    {cols.map((col, index) => (
+                        <Col key={index} sm={12} md={fullRow ? dynamicCols : colWidth}>
                             {col}
                         </Col>
                     ))}

@@ -44,6 +44,7 @@ export default function EventsSection() {
               }
               return (
                 <EventCard
+                  key={event.title}
                   title={event.title}
                   description={event.description}
                   date={date.dateString}

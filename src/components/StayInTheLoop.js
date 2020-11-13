@@ -56,7 +56,7 @@ export default function StayInTheLoop() {
                 <Button color="button-primary"
                     label={<Heading level="3" margin="none">Join Our Team</Heading>}
                     style={{ width: "medium" }}
-                    margin={{ top: 0, bottom: "medium" }}
+                    margin={{ top: "none", bottom: "medium" }}
                     alignSelf="center"
                     primary
                     hoverIndicator={{color: "card-background"}}
