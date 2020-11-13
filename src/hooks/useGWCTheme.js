@@ -78,6 +78,8 @@ const lightTheme = {
 
       "button-primary": "accent-3",
       "button-hover": "accent-2",
+
+      "footer-background": "neutral-3",
     },
     ...font,
     ...elevation,
@@ -111,6 +113,8 @@ const darkTheme = {
 
       "button-primary": "accent-3",
       "button-hover": "accent-2",
+
+      "footer-background": "card-background",
     },
     ...font,
     ...elevation,

@@ -27,7 +27,7 @@ export default function EventsSection() {
     getEvents();
   }, []);
   return (
-    <Box fill="horizontal" direction="row-responsive" justify="center">
+    <Box fill={true} direction="row-responsive" justify="center">
       {loadingEvents || events == null ? (
         <LoadingSpinner />
       ) : (

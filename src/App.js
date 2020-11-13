@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Box, Grommet, Main, CheckBox, Header } from "grommet";
+import { Box, Grommet, Main, CheckBox, Header, Footer, Heading, Image } from "grommet";
 import Logo from "./components/Logo.js";
-import Body from "./components/Body.js";
 import Section from "./components/Section.js";
 import EventsSection from "./components/EventsSection.js";
 
@@ -9,6 +8,23 @@ import useComponentScroll from "./hooks/useComponentScroll.js";
 import { lightTheme, darkTheme } from "./hooks/useGWCTheme.js";
 import Landing from "./components/Landing.js";
 
+import logo from "./static/gwc2020_website_logo_nobg.png";
+
+function Body({ children }) {
+  return (
+    <Box flex="grow" pad="medium">
+      {children}
+    </Box>
+  )
+}
+
+function NotHeader({ children, innerRef }) {
+  return (
+    <Box overflow="auto" ref={innerRef}>
+      {children}
+    </Box>
+  )
+}
 
 function App() {
   const [isLightMode, setIsLightMode] = useState(true);
@@ -39,12 +55,25 @@ function App() {
             />
           </Box>
         </Header>
-        <Body innerRef={innerRef}>
-          <Landing />
-          <Section title="Upcoming Events">
-            <EventsSection />
-          </Section>
-        </Body>
+        <NotHeader innerRef={innerRef} >
+          <Body>
+            <Landing />
+            <Section title="Upcoming Events">
+              <EventsSection />
+            </Section>
+          </Body>
+          <Footer fill="horizontal" background="footer-background" flex="grow" pad="medium">
+            <Box width="medium">
+              <Image
+                src={logo}
+                fit="contain"
+                fill="vertical"
+                a11yTitle="UTD Girls Who Code logo"
+              />
+              <Heading textAlign="center" margin="none" level={2}>UTD Girls Who Code</Heading>
+            </Box>
+          </Footer>
+        </NotHeader>
       </Main>
     </Grommet>
   );

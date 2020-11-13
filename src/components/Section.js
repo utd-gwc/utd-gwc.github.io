@@ -5,7 +5,7 @@ import FadeInComponent from "./FadeInComponent.js";
 
 export default function Section({ title, children }) {
     return (
-        <Box margin={{ horizontal: "medium", bottom: "small" }}>
+        <Box flex="grow" margin={{ horizontal: "medium", bottom: "small" }}>
             <FadeInComponent>
                 <Heading level="2" margin="none">
                     {title}
