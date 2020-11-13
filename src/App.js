@@ -4,11 +4,10 @@ import Logo from "./components/Logo.js";
 import Body from "./components/Body.js";
 import Section from "./components/Section.js";
 import EventsSection from "./components/EventsSection.js";
-import CodeSnippet from "./components/CodeSnippet.js";
-import StayInTheLoop from "./components/StayInTheLoop.js";
 
 import useComponentScroll from "./hooks/useComponentScroll.js";
 import { lightTheme, darkTheme } from "./hooks/useGWCTheme.js";
+import Landing from "./components/Landing.js";
 
 
 function App() {
@@ -41,14 +40,7 @@ function App() {
           </Box>
         </Header>
         <Body innerRef={innerRef}>
-          <Box height={{min: "100vh"}} fill="vertical" direction="row-responsive" margin={{top: "large"}}>
-            <Box direction="column" width="large">
-              <CodeSnippet />
-            </Box>
-            <Box flex="grow" align="end" direction="column">
-              <StayInTheLoop />
-            </Box>
-          </Box>
+          <Landing />
           <Section title="Upcoming Events">
             <EventsSection />
           </Section>
