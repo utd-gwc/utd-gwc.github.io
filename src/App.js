@@ -70,7 +70,7 @@ function App() {
                 fill="vertical"
                 a11yTitle="UTD Girls Who Code logo"
               />
-              <Heading textAlign="center" margin="none" level={2}>UTD Girls Who Code</Heading>
+              <Heading textAlign="center" margin="none" level={2} color="black">UTD Girls Who Code</Heading>
             </Box>
           </Footer>
         </NotHeader>
