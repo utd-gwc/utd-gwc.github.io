@@ -13,7 +13,7 @@ export default function Logo({ scrollTop, theme }) {
     /\d+/
   )[0];
   const size = React.useContext(ResponsiveContext);
-  const showDarkLogo = theme==="dark" && scrollTop === 0
+  const showDarkLogo = theme === "dark" && scrollTop === 0
   return (
     <Box
       align="center"
@@ -39,7 +39,6 @@ export default function Logo({ scrollTop, theme }) {
           a11yTitle="UTD Girls Who Code logo"
         />
       </Stack>
-
     </Box>
   );
 }

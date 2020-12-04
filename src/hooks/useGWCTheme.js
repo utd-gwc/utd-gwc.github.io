@@ -105,7 +105,7 @@ const darkTheme = {
       "card-background": "#224975",
       "card-footer": "accent-3",
       "icon-color": "brand",
-      
+
       "code-keyword": "accent-2",
       "code-variable": "neutral-1",
       "code-function": "neutral-2",

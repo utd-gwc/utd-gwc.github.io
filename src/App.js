@@ -40,7 +40,7 @@ function App() {
   return (
     <Grommet theme={isLightMode ? lightTheme : darkTheme} full>
       <Main>
-        <NavBar isLightMode={isLightMode} scrollTop={scrollTop} setIsLightMode={setIsLightMode}/>
+        <NavBar isLightMode={isLightMode} scrollTop={scrollTop} setIsLightMode={setIsLightMode} />
         <NotHeader innerRef={innerRef} >
           <Body>
             <Landing />
