@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Box, Grommet, Main, CheckBox, Header, Footer, Heading, Image } from "grommet";
-import Logo from "./components/Logo.js";
+import { Box, Grommet, Main, Footer, Heading, Image } from "grommet";
 import Section from "./components/Section.js";
 import EventsSection from "./components/EventsSection.js";
 
@@ -10,6 +9,7 @@ import Landing from "./components/Landing.js";
 
 import logo from "./static/gwc2020_website_logo_nobg.png";
 import OfficerSection from "./components/OfficerSection.js";
+import NavBar from "./components/NavBar.js";
 
 function Body({ children }) {
   return (
@@ -40,29 +40,14 @@ function App() {
   return (
     <Grommet theme={isLightMode ? lightTheme : darkTheme} full>
       <Main>
-        <Header
-          pad={{ left: "medium", right: "small", vertical: "small" }}
-          elevation="xsmall"
-          background={scrollTop === 0 ? "background" : "neutral-3"}
-          style={{ transition: "background-color .4s" }}
-        >
-          <Logo scrollTop={scrollTop} theme={isLightMode ? "light" : "dark"} />
-          <Box justify="between" fill="horizontal" align="end">
-            <CheckBox
-              toggle
-              onChange={() => {
-                setIsLightMode(!isLightMode);
-              }}
-            />
-          </Box>
-        </Header>
+        <NavBar isLightMode={isLightMode} scrollTop={scrollTop} setIsLightMode={setIsLightMode}/>
         <NotHeader innerRef={innerRef} >
           <Body>
             <Landing />
-            <Section title="Upcoming Events">
+            <Section title="Upcoming Events" id="events">
               <EventsSection />
             </Section>
-            <Section title="Our Team">
+            <Section title="Our Team" id="team">
               <OfficerSection />
             </Section>
           </Body>
