@@ -11,7 +11,7 @@ export default function OfficerSection() {
     async function getOfficers() {
         try {
             setloadingOfficers(true);
-            const res = await fetch(`https://utd-gwc-api.herokuapp.com/api/officers`, {
+            const res = await fetch(`https://utd-gwc-api.herokuapp.com/api/officers?sort=+order`, {
                 method: "GET",
             });
             const officers = await res.json();
