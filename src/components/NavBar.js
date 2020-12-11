@@ -4,13 +4,13 @@ import Logo from "./Logo.js";
 
 function linkColor(isLightMode, scrollTop) {
     if (isLightMode) {
-        if (scrollTop > 0) {
+        if (scrollTop > 20) {
             return 'neutral-2';
         } else {
             return 'neutral-1';
         }
     } else {
-        if (scrollTop > 0) {
+        if (scrollTop > 20) {
             return 'brand';
         } else {
             return 'accent-1';
@@ -31,10 +31,10 @@ export default function NavBar({ scrollTop, isLightMode, setIsLightMode }) {
         <Header
             pad={{ left: "medium", right: "small", vertical: "small" }}
             elevation="xsmall"
-            background={scrollTop === 0 ? "background" : "neutral-3"}
-            style={{ transition: "background-color .4s" }}
+            background={scrollTop < 20 ? "background" : "neutral-3"}
+            style={{ transition: "all .4s" }}
         >
-            <Logo scrollTop={scrollTop} theme={isLightMode ? "light" : "dark"} />
+            <Logo scrollTop={scrollTop} />
             <Box direction="row" fill="horizontal" justify="end" align="center">
                 <StyledLink id="events" label="Events" isLightMode={isLightMode} scrollTop={scrollTop} />
                 <StyledLink id="team" label="Team" isLightMode={isLightMode} scrollTop={scrollTop} />
