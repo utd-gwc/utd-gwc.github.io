@@ -58,7 +58,7 @@ export default function StayInTheLoop() {
                     alignSelf="center"
                     primary
                     hoverIndicator={{ color: "card-background" }}
-                    href=""
+                    href="https://bit.ly/2W8pxdL"
                     target="_blank"
                 />
             </StayInTheLoopBox>
