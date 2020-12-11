@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "abf5e2701a6f91dc7520bdd73a80b387",
+    "revision": "f4959ffd000e730c56ce95cc9e7c26b6",
     "url": "/index.html"
   },
   {
-    "revision": "abfe5e0df29b2855514e",
+    "revision": "e5cd56104db0761393ef",
     "url": "/static/css/2.22d6b5ec.chunk.css"
   },
   {
-    "revision": "a08c110b3e980ca6e4c5",
+    "revision": "17f73e119f2608143444",
     "url": "/static/css/main.9b5d36b6.chunk.css"
   },
   {
-    "revision": "abfe5e0df29b2855514e",
-    "url": "/static/js/2.068c4644.chunk.js"
+    "revision": "e5cd56104db0761393ef",
+    "url": "/static/js/2.470131b0.chunk.js"
   },
   {
     "revision": "64bea2e190f27355a76963b8cb94bb7b",
-    "url": "/static/js/2.068c4644.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.470131b0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a08c110b3e980ca6e4c5",
-    "url": "/static/js/main.a07b1cdb.chunk.js"
+    "revision": "17f73e119f2608143444",
+    "url": "/static/js/main.1881fdf8.chunk.js"
   },
   {
     "revision": "73635f645c271e35ff15",
@@ -30,10 +30,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "80ccd59e9b2a19036d9eb91995af1b69",
     "url": "/static/media/Microsoft_Teams-Logo.wine.80ccd59e.svg"
-  },
-  {
-    "revision": "211ab73e9edac1c3ed03cada85a0ebd3",
-    "url": "/static/media/gwc2020_DARK_website_logo_nobg.211ab73e.png"
   },
   {
     "revision": "63e40a6ad9376827b4e155a06433197d",
