@@ -79,6 +79,8 @@ const lightTheme = {
       "button-primary": "accent-3",
       "button-hover": "accent-2",
 
+      "nav-background": "background",
+      "nav-background-collapsed": "neutral-3",
       "footer-background": "neutral-3",
 
       "photo-border": "none"
@@ -116,6 +118,8 @@ const darkTheme = {
       "button-primary": "accent-3",
       "button-hover": "accent-2",
 
+      "nav-background": "card-background",
+      "nav-background-collapsed": "neutral-3",
       "footer-background": "card-background",
 
       "photo-border": "white"
