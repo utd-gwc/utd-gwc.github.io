@@ -68,7 +68,7 @@ export default function StayInTheLoop() {
     } else {
         return (
             <StayInTheLoopBox>
-                <Image fit="cover" src={featuredEvent.flyerUrl} />
+                <Image fit="contain" src={featuredEvent.flyerUrl} />
             </StayInTheLoopBox>
         )
     }

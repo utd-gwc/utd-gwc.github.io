@@ -11,6 +11,7 @@
     "grommet": "^2.15.1",
     "grommet-icons": "^4.5.0",
     "react": "^16.13.1",
+    "react-card-flip": "^1.0.11",
     "react-dom": "^16.13.1",
     "react-flexbox-grid": "^2.1.2",
     "react-scripts": "3.4.3",

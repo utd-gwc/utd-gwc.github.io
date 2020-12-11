@@ -40,7 +40,7 @@ export default function EventsSection() {
               if (event.date != null) {
                 let tempDate = new Date(event.date);
                 date.dateString = tempDate.toLocaleDateString();
-                date.timeString = tempDate.toLocaleTimeString();
+                date.timeString = tempDate.toLocaleTimeString([], {hour: 'numeric', minute:'2-digit'});
               }
               return (
                 <EventCard
@@ -48,6 +48,8 @@ export default function EventsSection() {
                   title={event.title}
                   description={event.description}
                   date={date.dateString}
+                  time={date.timeString}
+                  flyerUrl={event.flyerUrl}
                 />
               );
             })}
