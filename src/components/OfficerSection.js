@@ -33,15 +33,6 @@ export default function OfficerSection() {
             ) : (
                     <GridGenerator fullRow>
                         {officers.map((officer) => {
-                            var date = {
-                                dateString: null,
-                                timeString: null,
-                            };
-                            //   if (officer.date != null) {
-                            //     let tempDate = new Date(officer.date);
-                            //     date.dateString = tempDate.toLocaleDateString();
-                            //     date.timeString = tempDate.toLocaleTimeString();
-                            //   }
                             return (
                                 <OfficerCard
                                     key={officer._id}
