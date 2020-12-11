@@ -80,6 +80,8 @@ const lightTheme = {
       "button-hover": "accent-2",
 
       "footer-background": "neutral-3",
+
+      "photo-border": "none"
     },
     ...font,
     ...elevation,
@@ -115,6 +117,8 @@ const darkTheme = {
       "button-hover": "accent-2",
 
       "footer-background": "card-background",
+
+      "photo-border": "white"
     },
     ...font,
     ...elevation,
