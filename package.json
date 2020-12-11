@@ -10,6 +10,7 @@
     "gh-pages": "^3.1.0",
     "grommet": "^2.15.1",
     "grommet-icons": "^4.5.0",
+    "ics": "^2.26.2",
     "react": "^16.13.1",
     "react-card-flip": "^1.0.11",
     "react-dom": "^16.13.1",

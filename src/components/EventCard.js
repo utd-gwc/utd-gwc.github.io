@@ -3,16 +3,17 @@ import {
   Button,
   Card,
   CardHeader,
-  CardBody,
   CardFooter,
   Paragraph,
   Heading,
   Box,
   Text,
-  Image
+  Image,
+  Menu
 } from "grommet";
 import ReactCardFlip from 'react-card-flip'
 import * as Icons from "grommet-icons";
+import { createEvent } from 'ics'
 
 function CardFramework({ children }) {
   return (
@@ -22,12 +23,36 @@ function CardFramework({ children }) {
   )
 }
 
-function SharedCardFooter({ toggleShowFlyer, flyerUrl, showFlyer }) {
+function downloadTxtFile(event) {
+  const tempDate = new Date(event.dateObj)
+  createEvent({
+    title: event.title,
+    description: event.description,
+    busyStatus: 'BUSY',
+    duration: { hours: 1 },
+    start: [tempDate.getFullYear(), tempDate.getMonth(), tempDate.getDate(), tempDate.getHours(), tempDate.getMinutes()],
+    organizer: { name: 'UTD Girls Who Code', email: 'utdgirlswhocode@gmail.com' }
+  }, (error, value) => {
+    const element = document.createElement("a");
+    const file = new Blob([value], { type: 'text/calendar' });
+    element.href = URL.createObjectURL(file);
+    element.download = event.title + ".ics";
+    document.body.appendChild(element); // Required for this to work in FireFox
+    element.click();
+  })
+}
+
+function SharedCardFooter({ toggleShowFlyer, showFlyer, event }) {
   return (
     <CardFooter align="center" direction="row-responsive" justify="between" gap="medium" pad={{ horizontal: "small" }} fill="horizontal" background="card-footer">
-      <Button icon={<Icons.ShareOption color="icon-color" />} hoverIndicator />
-      {flyerUrl != null && <Button primary label={<Text>{showFlyer ? "View Text" : "View Flyer"}</Text>} color="card-background" onClick={toggleShowFlyer} />}
-      <Button icon={<Icons.More color="icon-color" />} hoverIndicator />
+      {/* <Button icon={<Icons.ShareOption color="icon-color" />} hoverIndicator /> */}
+      {event.flyerUrl != null && <Button primary label={<Text>{showFlyer ? "View Text" : "View Flyer"}</Text>} color="card-background" onClick={toggleShowFlyer} />}
+      <Menu icon={<Icons.More color="icon-color" />} hoverIndicator
+        items={[
+          { label: "Open Flyer", onClick: () => { window.open(event.flyerUrl, '_blank') } },
+          { label: "Save iCal Event", onClick: () => { downloadTxtFile(event) } },
+        ]}
+      />
     </CardFooter>
   )
 }
@@ -40,7 +65,7 @@ export default function EventCard(props) {
   return (
     <ReactCardFlip isFlipped={showFlyer}>
       <CardFramework>
-        <CardHeader fill="horizontal" pad="small" align="small" justify="between" margin="none" pad="small" gap="medium" direction="row-responsive">
+        <CardHeader fill="horizontal" pad="small" align="center" justify="between" margin="none" pad="small" gap="medium" direction="row-responsive">
           <Heading level="2" margin="xsmall" textAlign="start" size="medium">
             {props.title}
           </Heading>
@@ -56,7 +81,7 @@ export default function EventCard(props) {
         <Box align="center" justify="center" pad="xsmall" margin="xsmall" height="large">
           <Paragraph size="medium" margin="medium" textAlign="center" truncate>{props.description}</Paragraph>
         </Box>
-        <SharedCardFooter toggleShowFlyer={toggleShowFlyer} flyerUrl={props.flyerUrl} showFlyer={showFlyer} />
+        <SharedCardFooter toggleShowFlyer={toggleShowFlyer} showFlyer={showFlyer} event={props} />
       </CardFramework>
 
 
@@ -64,7 +89,7 @@ export default function EventCard(props) {
         <Box align="center" justify="center" pad="none" margin="none" height="large">
           <Image src={props.flyerUrl} fill="vertical" fit="contain" />
         </Box>
-        <SharedCardFooter toggleShowFlyer={toggleShowFlyer} flyerUrl={props.flyerUrl} showFlyer={showFlyer} />
+        <SharedCardFooter toggleShowFlyer={toggleShowFlyer} showFlyer={showFlyer} event={props} />
       </CardFramework>
     </ReactCardFlip>
 

@@ -47,6 +47,7 @@ export default function EventsSection() {
                   key={event.title}
                   title={event.title}
                   description={event.description}
+                  dateObj={event.date}
                   date={date.dateString}
                   time={date.timeString}
                   flyerUrl={event.flyerUrl}
