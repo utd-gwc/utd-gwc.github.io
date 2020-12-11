@@ -6,14 +6,12 @@ import FadeInComponent from "./FadeInComponent.js";
 
 function StayInTheLoopBox({ children }) {
     return (
-        <FadeInComponent style={{ alignSelf: "center" }}>
-            <Box align="center" alignSelf="center" justify="center">
+            <Box animation="slideUp" align="center" alignSelf="center" justify="center">
                 <Heading level="2" margin={{ bottom: "small", top: "none" }}>Stay In The Loop!</Heading>
                 <Box width="medium" height="medium" background="card-background" round direction="column" elevation="medium">
                     {children}
                 </Box>
             </Box>
-        </FadeInComponent>
     )
 }
 
