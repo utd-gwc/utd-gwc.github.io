@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, CheckBox, Header, SkipLink, Text, Heading } from "grommet";
+import { Box, CheckBox, Header, SkipLink, Heading } from "grommet";
 import Logo from "./Logo.js";
 
 function linkColor(isLightMode, isExpanded) {
@@ -34,7 +34,8 @@ export default function NavBar({ scrollTop, isLightMode, setIsLightMode }) {
             pad={{ left: "medium", right: "small", vertical: "small" }}
             elevation="xsmall"
             background={isExpanded ? "nav-background" : "nav-background-collapsed"}
-            style={{ transition: "all .4s" }}
+            fill="horizontal"
+            style={{ transition: "all .4s"}}
         >
             <Logo scrollTop={scrollTop} />
             <Box direction="row" fill="horizontal" justify="end" align="center">
@@ -48,7 +49,7 @@ export default function NavBar({ scrollTop, isLightMode, setIsLightMode }) {
                             setIsLightMode(!isLightMode);
                         }}
                         label={
-                            <Heading margin={{ vertical: "none", left: -5 }} pad="none" level={3}>
+                            <Heading margin={{vertical: "none"}} pad="none" level={3}>
                                 {isLightMode ? "🌞" : "🌙"}
                             </Heading>
                         }
