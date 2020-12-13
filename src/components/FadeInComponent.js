@@ -23,7 +23,7 @@ export default function FadeInComponent({ children, style }) {
 
     observer.observe(div);
 
-    return () => observer.unobserve(div);
+    return () => { observer.unobserve(div) };
   }, [domRef]);
 
   return (

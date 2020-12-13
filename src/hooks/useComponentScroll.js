@@ -12,7 +12,7 @@ export default function useComponentScroll(handleOnScroll) {
       // unsubscribe event
       div.removeEventListener("scroll", handleOnScroll);
     };
-  }, [handleOnScroll]);
+  }, [innerRef, handleOnScroll]);
 
   return innerRef;
 }

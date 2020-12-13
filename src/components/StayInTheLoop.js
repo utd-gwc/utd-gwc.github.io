@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Box, Heading, Image, Button } from "grommet";
 import LoadingSpinner from "./LoadingSpinner.js";
 import TeamsLogo from './../static/Microsoft_Teams-Logo.wine.svg'
-import FadeInComponent from "./FadeInComponent.js";
 
 function StayInTheLoopBox({ children }) {
     return (
