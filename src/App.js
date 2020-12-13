@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { Box, Grommet, Main, Footer, Heading, Image } from "grommet";
 import Section from "./components/Section.js";
 import EventsSection from "./components/EventsSection.js";
+import Background from "./components/Background.js";
+import Landing from "./components/Landing.js";
+import OfficerSection from "./components/OfficerSection.js";
+import NavBar from "./components/NavBar.js";
 
 import useComponentScroll from "./hooks/useComponentScroll.js";
 import { lightTheme, darkTheme } from "./hooks/useGWCTheme.js";
-import Landing from "./components/Landing.js";
 
 import logo from "./static/gwc2020_website_logo_nobg.png";
-import OfficerSection from "./components/OfficerSection.js";
-import NavBar from "./components/NavBar.js";
 
 function Body({ children }) {
   return (
@@ -19,10 +20,13 @@ function Body({ children }) {
   )
 }
 
-function NotHeader({ children, innerRef }) {
+function NotHeader({ children, isLightMode, innerRef }) {
   return (
-    <Box overflow="auto" ref={innerRef}>
-      {children}
+    <Box style={{ position: "relative", overflowY: "scroll"}} ref={innerRef} >
+      <Background isLightMode={isLightMode} />
+      <Box style={{ position: "relative"}} zIndex={999}>
+        {children}
+      </Box>
     </Box>
   )
 }
@@ -41,7 +45,7 @@ function App() {
     <Grommet theme={isLightMode ? lightTheme : darkTheme} full>
       <Main>
         <NavBar isLightMode={isLightMode} scrollTop={scrollTop} setIsLightMode={setIsLightMode} />
-        <NotHeader innerRef={innerRef} >
+        <NotHeader isLightMode={isLightMode} innerRef={innerRef}>
           <Body>
             <Landing />
             <Section title="Upcoming Events" id="events">
@@ -64,7 +68,7 @@ function App() {
           </Footer>
         </NotHeader>
       </Main>
-    </Grommet>
+    </Grommet >
   );
 }
 
