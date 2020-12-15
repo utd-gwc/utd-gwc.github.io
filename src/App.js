@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { Box, Grommet, Main, Footer, Heading, Image } from "grommet";
+import Feed from "react-instagram-authless-feed"
+import './styles/App.css'
+
 import Section from "./components/Section.js";
 import EventsSection from "./components/EventsSection.js";
 import Background from "./components/Background.js";
 import Landing from "./components/Landing.js";
 import OfficerSection from "./components/OfficerSection.js";
 import NavBar from "./components/NavBar.js";
+import InstaFeed from "./components/InstaFeed.js";
 
 import useComponentScroll from "./hooks/useComponentScroll.js";
 import { lightTheme, darkTheme } from "./hooks/useGWCTheme.js";
 
 import logo from "./static/gwc2020_website_logo_nobg.png";
+import ContactSection from "./components/ContactSection";
 
 function Body({ children }) {
   return (
@@ -22,9 +27,9 @@ function Body({ children }) {
 
 function NotHeader({ children, isLightMode, innerRef }) {
   return (
-    <Box style={{ position: "relative", overflowY: "scroll"}} ref={innerRef} >
+    <Box style={{ position: "relative", overflowY: "scroll" }} ref={innerRef} >
       <Background isLightMode={isLightMode} />
-      <Box style={{ position: "relative"}} zIndex={999}>
+      <Box style={{ position: "relative" }} zIndex={999}>
         {children}
       </Box>
     </Box>
@@ -53,6 +58,12 @@ function App() {
             </Section>
             <Section title="Our Team" id="team">
               <OfficerSection />
+            </Section>
+            <Section title="Follow Us" id="contact">
+              <Box margin="medium" direction="row-responsive">
+                <InstaFeed isLightMode={isLightMode} />
+                <ContactSection isLightMode={isLightMode} />
+              </Box>
             </Section>
           </Body>
           <Footer fill="horizontal" background="footer-background" flex="grow" pad="medium">

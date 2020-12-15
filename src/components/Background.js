@@ -189,12 +189,12 @@ export default function Background({ isLightMode }) {
                     </Box>
                 )
             })} */}
-            <OutlinedBlobs />
-            <PinkBlob2 />
-            <SquareDots />
-            <LightPinkBlob />
-            <Squiggle />
-            <PinkBlob />
+            <OutlinedBlobs isLightMode={isLightMode} />
+            <PinkBlob2 isLightMode={isLightMode} />
+            <SquareDots isLightMode={isLightMode}/>
+            <LightPinkBlob isLightMode={isLightMode} />
+            <Squiggle isLightMode={isLightMode} />
+            <PinkBlob isLightMode={isLightMode} />
         </Box>
     )
 }

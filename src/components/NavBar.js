@@ -40,7 +40,9 @@ export default function NavBar({ scrollTop, isLightMode, setIsLightMode }) {
             <Logo scrollTop={scrollTop} />
             <Box direction="row" fill="horizontal" justify="end" align="center">
                 <StyledLink id="events" label="Events" isLightMode={isLightMode} isExpanded={isExpanded} />
-                <StyledLink id="team" label="Team" isLightMode={isLightMode}  isExpanded={isExpanded} pad={{ right: 'medium' }} />
+                <StyledLink id="team" label="Team" isLightMode={isLightMode}  isExpanded={isExpanded} />
+                <StyledLink id="contact" label="Follow Us" isLightMode={isLightMode}  isExpanded={isExpanded} pad={{ right: 'medium' }} />
+
                 <Box align="center" alignSelf="end" direction="row">
                     <CheckBox
                         toggle
