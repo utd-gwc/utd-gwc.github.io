@@ -15,6 +15,7 @@ import { lightTheme, darkTheme } from "./hooks/useGWCTheme.js";
 
 import logo from "./static/gwc2020_website_logo_nobg.png";
 import ContactSection from "./components/ContactSection";
+import AboutSection from "./components/AboutSection";
 
 function Body({ children }) {
   return (
@@ -54,6 +55,9 @@ function App() {
             <Landing />
             <Section title="Upcoming Events" id="events">
               <EventsSection />
+            </Section>
+            <Section title="About Us" id="about">
+              <AboutSection />
             </Section>
             <Section title="Our Team" id="team">
               <OfficerSection />
