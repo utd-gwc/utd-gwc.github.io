@@ -10,7 +10,7 @@ import Teams from '../static/Microsoft_Teams-Logo.wine.svg'
 function SocialLink({ isLightMode, socialInfo: {src, url, title}, key }) {
     return (
         <a key={key} href={url} target="_blank" referrer="noreferrer" style={{ color: isLightMode ? "black" : "white" }}>
-            <Box direction="row-responsive" align="center">
+            <Box direction="row" align="center">
                 <Box height="xxsmall" width="xxsmall" margin="small" align="center">
                     <Image src={src} fit="contain" fill="vertical" width="small" />
                 </Box>
