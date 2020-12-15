@@ -50,12 +50,12 @@ export default function InstaFeed({ isLightMode }) {
                     <Box direction="row">
                         <Box align="center" justify="center" pad="medium" margin="none" background={{ "color": "light-2", "image": instaPFP }} round="full" />
                         <Box align="start">
-                            <a class="InstaUsername" href="https://www.instagram.com/utdgwc" target="_blank" referrer="noreferrer" style={{ color: isLightMode ? "black" : "white" }}>
+                            <a class="InstaUsername" href="https://www.instagram.com/utdgwc" target="_blank" referrer="noopener noreferrer" style={{ color: isLightMode ? "black" : "white" }}>
                                 utdgwc
                         </a>
                         </Box>
                     </Box>
-                    <a class="ViewProfileButton" href="https://www.instagram.com/utdgwc" referrer="noreferrer" target="_blank">
+                    <a class="ViewProfileButton" href="https://www.instagram.com/utdgwc" referrer="noopener noreferrer" target="_blank">
                         View Profile
                 </a>
                 </CardHeader>
@@ -71,7 +71,7 @@ export default function InstaFeed({ isLightMode }) {
                                 <InfiniteScroll items={feed}>
                                     {(item) => (
                                         <Box flex={false} height="medium" margin={{ bottom: "medium" }}>
-                                            <a href={item.url} target="_blank" referrer="noreferrer">
+                                            <a href={item.url} target="_blank" referrer="noopener noreferrer">
                                                 <Image
                                                     src={item.src}
                                                     fit="cover"
