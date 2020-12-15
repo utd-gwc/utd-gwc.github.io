@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Box, Grommet, Main, Footer, Heading, Image } from "grommet";
-import Feed from "react-instagram-authless-feed"
 import './styles/App.css'
 
 import Section from "./components/Section.js";
