@@ -44,45 +44,47 @@ export default function InstaFeed({ isLightMode }) {
     }, []);
 
     return (
-        <Card height="medium" width="medium" style={{ overflowY: 'scoll' }} border={{ color: "card-background" }} background="card-background">
-            <CardHeader fill="horizontal" pad="small" background="card-background">
-                <Box direction="row">
-                    <Box align="center" justify="center" pad="medium" margin="none" background={{ "color": "light-2", "image": instaPFP }} round="full" />
-                    <Box align="start">
-                        <a class="InstaUsername" href="https://www.instagram.com/utdgwc" target="_blank" referrer="noreferrer" style={{ color: isLightMode ? "black" : "white" }}>
-                            utdgwc
+        <Box margin="medium">
+            <Card height="medium" width="medium" style={{ overflowY: 'scoll' }} border={{ color: "card-background" }} background="card-background">
+                <CardHeader fill="horizontal" pad="small" background="card-background">
+                    <Box direction="row">
+                        <Box align="center" justify="center" pad="medium" margin="none" background={{ "color": "light-2", "image": instaPFP }} round="full" />
+                        <Box align="start">
+                            <a class="InstaUsername" href="https://www.instagram.com/utdgwc" target="_blank" referrer="noreferrer" style={{ color: isLightMode ? "black" : "white" }}>
+                                utdgwc
                         </a>
-                    </Box>
-                </Box>
-                <a class="ViewProfileButton" href="https://www.instagram.com/utdgwc" referrer="noreferrer" target="_blank">
-                    View Profile
-                </a>
-            </CardHeader>
-            {loadingFeed ? (<LoadingSpinner />) :
-                (feed == null ? (
-                    <Box margin="medium">
-                        <Heading level={4}>
-                            Something went wrong. Please try again later.
-                        </Heading>
-                    </Box>
-                ) : (
-                        <Box overflow="auto">
-                            <InfiniteScroll items={feed}>
-                                {(item) => (
-                                    <Box flex={false} height="medium" margin={{ bottom: "medium" }}>
-                                        <a href={item.url} target="_blank" referrer="noreferrer">
-                                            <Image
-                                                src={item.src}
-                                                fit="cover"
-                                                fill="horizontal"
-                                                a11yTitle={item.alt} />
-                                        </a>
-                                    </Box>
-                                )}
-                            </InfiniteScroll>
                         </Box>
-                    ))
-            }
-        </Card>
+                    </Box>
+                    <a class="ViewProfileButton" href="https://www.instagram.com/utdgwc" referrer="noreferrer" target="_blank">
+                        View Profile
+                </a>
+                </CardHeader>
+                {loadingFeed ? (<LoadingSpinner />) :
+                    (feed == null ? (
+                        <Box margin="medium">
+                            <Heading level={4}>
+                                Something went wrong. Please try again later.
+                        </Heading>
+                        </Box>
+                    ) : (
+                            <Box overflow="auto">
+                                <InfiniteScroll items={feed}>
+                                    {(item) => (
+                                        <Box flex={false} height="medium" margin={{ bottom: "medium" }}>
+                                            <a href={item.url} target="_blank" referrer="noreferrer">
+                                                <Image
+                                                    src={item.src}
+                                                    fit="cover"
+                                                    fill="horizontal"
+                                                    a11yTitle={item.alt} />
+                                            </a>
+                                        </Box>
+                                    )}
+                                </InfiniteScroll>
+                            </Box>
+                        ))
+                }
+            </Card>
+        </Box>
     )
 }

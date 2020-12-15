@@ -1,13 +1,13 @@
 import React from 'react';
 import { Box, Heading, Image } from 'grommet';
-import LinkedIn from '../static/logos/linkedin-icon.svg'
+// import LinkedIn from '../static/logos/linkedin-icon.svg'
 import Discord from '../static/logos/discord-4.svg'
 import Gmail from '../static/logos/gmail-icon-3.svg'
 import Facebook from '../static/logos/facebook-3.svg'
 import Instagram from '../static/logos/instagram-2-1.svg'
 import Teams from '../static/Microsoft_Teams-Logo.wine.svg'
 
-function SocialLink({ isLightMode, socialInfo: {src, url, title}, key }) {
+function SocialLink({ isLightMode, socialInfo: { src, url, title }, key }) {
     return (
         <a key={key} href={url} target="_blank" referrer="noreferrer" style={{ color: isLightMode ? "black" : "white" }}>
             <Box direction="row" align="center">
@@ -25,12 +25,12 @@ function SocialLink({ isLightMode, socialInfo: {src, url, title}, key }) {
 export default function ContactSection({ isLightMode }) {
     const socials = [
         {
-            title: "Instagram",
+            title: "@utdgwc",
             url: "https://www.instagram.com/utdgwc",
             src: Instagram
         },
         {
-            title: "Facebook",
+            title: "/utdgirlswhocode",
             url: "https://www.facebook.com/utdgirlswhocode",
             src: Facebook,
         },
@@ -56,12 +56,14 @@ export default function ContactSection({ isLightMode }) {
         },
     ]
     return (
-        <Box direction="column" align="center" flex="grow" justify="center">
-            {socials.map((social, index) => {
-                return (
-                    <SocialLink isLightMode={isLightMode} socialInfo={social} key={index} />
-                )
-            })}
+        <Box align="center" flex="grow" justify="center" margin="medium">
+            <Box direction="column" align="start" justify="center">
+                {socials.map((social, index) => {
+                    return (
+                        <SocialLink isLightMode={isLightMode} socialInfo={social} key={index} />
+                    )
+                })}
+            </Box>
         </Box>
     )
 }

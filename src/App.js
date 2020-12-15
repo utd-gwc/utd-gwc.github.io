@@ -63,7 +63,7 @@ function App() {
               <OfficerSection />
             </Section>
             <Section title="Follow Us" id="contact">
-              <Box margin="medium" direction="row-responsive">
+              <Box direction="row-responsive">
                 <InstaFeed isLightMode={isLightMode} />
                 <ContactSection isLightMode={isLightMode} />
               </Box>
