@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Grommet, Main, Footer, Heading, Image } from "grommet";
+import { Box, Grommet, Main } from "grommet";
 import './styles/App.css'
 
 import Section from "./components/Section.js";
@@ -9,13 +9,12 @@ import Landing from "./components/Landing.js";
 import OfficerSection from "./components/OfficerSection.js";
 import NavBar from "./components/NavBar.js";
 import InstaFeed from "./components/InstaFeed.js";
+import ContactSection from "./components/ContactSection";
+import AboutSection from "./components/AboutSection";
+import FooterSection from "./components/FooterSection";
 
 import useComponentScroll from "./hooks/useComponentScroll.js";
 import { lightTheme, darkTheme } from "./hooks/useGWCTheme.js";
-
-import logo from "./static/gwc2020_website_logo_nobg.png";
-import ContactSection from "./components/ContactSection";
-import AboutSection from "./components/AboutSection";
 
 function Body({ children }) {
   return (
@@ -69,17 +68,7 @@ function App() {
               </Box>
             </Section>
           </Body>
-          <Footer fill="horizontal" background="footer-background" flex="grow" pad="medium">
-            <Box width="medium">
-              <Image
-                src={logo}
-                fit="contain"
-                fill="vertical"
-                a11yTitle="UTD Girls Who Code logo"
-              />
-              <Heading textAlign="center" margin="none" level={2} color="black">UTD Girls Who Code</Heading>
-            </Box>
-          </Footer>
+          <FooterSection isLightMode={isLightMode}/>
         </NotHeader>
       </Main>
     </Grommet >

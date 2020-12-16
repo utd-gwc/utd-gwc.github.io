@@ -70,6 +70,7 @@ const lightTheme = {
       "card-background": "accent-2",
       "card-footer": "accent-3",
       "icon-color": "neutral-3",
+      "link-color": "neutral-2",
 
       "code-keyword": "neutral-3",
       "code-variable": "neutral-1",
@@ -109,6 +110,7 @@ const darkTheme = {
       "card-background": "#224975",
       "card-footer": "accent-3",
       "icon-color": "brand",
+      "link-color": "accent-1",
 
       "code-keyword": "accent-2",
       "code-variable": "neutral-1",
