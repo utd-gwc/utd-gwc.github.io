@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cd3fac1c827b05a3cc0e77e90e1c149c",
+    "revision": "1be227269b9ac1b48c2eee4c83b3db1a",
     "url": "/index.html"
   },
   {
-    "revision": "13345177779a7c1a7ea0",
+    "revision": "20e8556ab36b569562b7",
     "url": "/static/css/2.22d6b5ec.chunk.css"
   },
   {
-    "revision": "e2ba32a7460bc92c97b3",
+    "revision": "b08dc5b083952c22fecf",
     "url": "/static/css/main.7e811257.chunk.css"
   },
   {
-    "revision": "13345177779a7c1a7ea0",
-    "url": "/static/js/2.16841edf.chunk.js"
+    "revision": "20e8556ab36b569562b7",
+    "url": "/static/js/2.bbdf6500.chunk.js"
   },
   {
     "revision": "64bea2e190f27355a76963b8cb94bb7b",
-    "url": "/static/js/2.16841edf.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.bbdf6500.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e2ba32a7460bc92c97b3",
-    "url": "/static/js/main.b9e5309c.chunk.js"
+    "revision": "b08dc5b083952c22fecf",
+    "url": "/static/js/main.4116baed.chunk.js"
   },
   {
     "revision": "73635f645c271e35ff15",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "80ccd59e9b2a19036d9eb91995af1b69",
     "url": "/static/media/Microsoft_Teams-Logo.wine.80ccd59e.svg"
+  },
+  {
+    "revision": "7893087c9cd1ffcdb5a44520fd176445",
+    "url": "/static/media/WiCyS_UTD_logo.7893087c.png"
   },
   {
     "revision": "80fb960534f2877df1a380c55cd99df7",
@@ -50,5 +54,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9f41e00c05ab5419f570b33a1d8766ef",
     "url": "/static/media/instagram-2-1.9f41e00c.svg"
+  },
+  {
+    "revision": "00b8d0feaf8cd939759e90381f513862",
+    "url": "/static/media/wwc-logo-transparent.00b8d0fe.png"
   }
 ]);
