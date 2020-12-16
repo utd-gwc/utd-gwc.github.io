@@ -44,7 +44,7 @@ export default function InstaFeed({ isLightMode }) {
     }, []);
 
     return (
-        <Box margin="medium">
+        <Box margin="medium" basis="1/2" align="center">
             <Card height="medium" width="medium" style={{ overflowY: 'scoll' }} border={{ color: "card-background" }} background="card-background">
                 <CardHeader fill="horizontal" pad="small" background="card-background">
                     <Box direction="row">

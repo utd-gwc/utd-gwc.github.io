@@ -56,7 +56,7 @@ export default function ContactSection({ isLightMode }) {
         },
     ]
     return (
-        <Box align="center" flex="grow" justify="center" margin="medium">
+        <Box align="center" basis="1/2" justify="center" margin="medium">
             <Box direction="column" align="start" justify="center">
                 {socials.map((social, index) => {
                     return (
