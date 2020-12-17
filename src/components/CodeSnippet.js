@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading } from 'grommet'
+import { Box, Heading, ResponsiveContext } from 'grommet'
 import Typist from 'react-typist';
 
 const Tab = ({ children }) => {
@@ -21,24 +21,43 @@ const Code = ({ children, type, nospace }) => {
 const CodeWrapper = ({ children, isTypingDone }) => {
     if (isTypingDone) {
         return (
-            <Box elevation={"medium"} margin={{horizontal: "medium"}} round="small">
+            <Box elevation={"medium"} margin={{ horizontal: "medium" }} round="small">
                 {children}
             </Box>
         )
     } else {
         return (
-            <Box elevation={"none"} margin={{horizontal: "medium"}}>
+            <Box elevation={"none"} margin={{ horizontal: "medium" }}>
                 {children}
             </Box>
         )
     }
 }
 
+const ConditionalTypist = ({ children, isMobile, setIsTypingDone }) => {
+    if (isMobile) {
+        setIsTypingDone(true);
+        return (
+            <Box>
+                {children}
+            </Box>
+        )
+    } else {
+        setIsTypingDone(false);
+        return (
+            <Typist avgTypingDelay={45} cursor={{ show: false }} onTypingDone={() => { setIsTypingDone(true) }}>
+                {children}
+            </Typist>
+        )
+    }
+}
+
 export default function CodeSnippet() {
     const [isTypingDone, setIsTypingDone] = React.useState(false);
+    const size = React.useContext(ResponsiveContext)
     return (
         <CodeWrapper isTypingDone={isTypingDone}>
-            <Typist avgTypingDelay={45} cursor={{ show: false }} onTypingDone={() => { setIsTypingDone(true) }}>
+            <ConditionalTypist setIsTypingDone={setIsTypingDone} isMobile={size === 'small'}>
                 <Box margin="medium">
                     <div>
                         <Code type="keyword">const club</Code><Code type="variable">GWC</Code><Code>{"= () => {"}</Code>
@@ -76,7 +95,7 @@ export default function CodeSnippet() {
                     </Tab>
                     <Code>{"}"}</Code>
                 </Box>
-            </Typist>
+            </ConditionalTypist>
         </CodeWrapper>
     )
     // const club GWC = () => {
