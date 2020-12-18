@@ -50,7 +50,7 @@ function SharedCardFooter({ toggleShowFlyer, buttonText, event }) {
       <CardFooter height="xxsmall" align="center" justify="between" gap="medium" pad={{ horizontal: "small" }} fill="horizontal" background="card-footer">
         {/* <Button icon={<Icons.ShareOption color="icon-color" />} hoverIndicator /> */}
         <Button primary label={<Text>{buttonText}</Text>} color="card-background" onClick={toggleShowFlyer} />
-        <Menu icon={<Icons.More color="icon-color" />} hoverIndicator
+        <Menu icon={<Icons.More color="icon-color" />} hoverIndicator dropAlign={{ right: 'right', top: "bottom" }}
           items={[
             { label: "Open Flyer", onClick: () => { window.open(event.flyerUrl, '_blank') } },
             { label: "Save iCal Event", onClick: () => { downloadTxtFile(event) } },
@@ -62,7 +62,7 @@ function SharedCardFooter({ toggleShowFlyer, buttonText, event }) {
     return (
       <CardFooter height="xxsmall" align="center" justify="end" gap="medium" pad={{ horizontal: "small" }} fill="horizontal" background="card-footer">
         {/* <Button icon={<Icons.ShareOption color="icon-color" />} hoverIndicator /> */}
-        <Menu icon={<Icons.More color="icon-color" />} hoverIndicator
+        <Menu icon={<Icons.More color="icon-color" />} hoverIndicator dropAlign={{ right: 'right', top: "bottom" }}
           items={[
             { label: "Save iCal Event", onClick: () => { downloadTxtFile(event) } },
           ]}
