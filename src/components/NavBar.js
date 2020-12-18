@@ -76,6 +76,7 @@ export default function NavBar({ scrollTop, isLightMode, setIsLightMode }) {
                             margin={{ right: 'medium' }}
                             label={<Icons.Menu color={!isExpanded && isLightMode ? 'white' : null} size={isExpanded ? "large" : "medium"} />}
                             icon={false}
+                            dropAlign={{right: 'right', top: 'bottom'}}
                             dropBackground={{ color: isExpanded ? "nav-background" : "nav-background-collapsed", opacity: 'strong' }}
                             items={
                                 menuLinks.map(x => {
