@@ -10,10 +10,10 @@ export default function AboutSection(props) {
                     <Box background="neutral-1" pad="medium" round="small">
                         <Heading level={3} size="medium" margin={{ top: "none" }} textAlign="end">
                             @ UTD
-                    </Heading>
+                        </Heading>
                         <Paragraph size="medium">
-                            @Annie please give me some words for here
-                    </Paragraph>
+                            UTD’s GWC College Loop provides a platform for women to build sisterhood and community with other women at UTD, other universities and local high schools and middle schools. While honing our computer science skills, we engage with other women to take action, collaborate, create and inspire one another!
+                        </Paragraph>
                     </Box>
                 </Box>
             </FadeInComponent>
