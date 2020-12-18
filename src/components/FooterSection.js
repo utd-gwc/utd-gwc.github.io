@@ -43,7 +43,7 @@ export default function FooterSection() {
                         <Box width="xsmall">
                             <a href="https://utdwwc.com/" target="_blank" referrer="noreferrer">
                                 {isMobile ?
-                                    <Box fill="vertical" round="large" background="accent-3" margin={{ horizontal: "medium" }} align="center">
+                                    <Box fill="vertical" round="large" background="accent-3" margin={{ horizontal: "medium", bottom: "small" }} align="center">
                                         <Heading level={3} margin="medium" textAlign="center" color="black">UTD WWC</Heading>
                                     </Box> :
                                     <Image
@@ -58,7 +58,7 @@ export default function FooterSection() {
                         <Box width="xsmall">
                             <a href="https://utdwwc.com/wicys.html" target="_blank" referrer="noreferrer">
                                 {isMobile ?
-                                    <Box fill="vertical" round="large" background="accent-3" margin={{ horizontal: "medium" }} align="center">
+                                    <Box fill="vertical" round="large" background="accent-3" margin={{ horizontal: "medium", top: "small" }} align="center">
                                         <Heading level={3} margin="medium" textAlign="center" color="black">UTD WiCyS</Heading>
                                     </Box> :
                                     <Image
