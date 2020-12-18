@@ -19,7 +19,7 @@ export default function FooterSection() {
                     fill="vertical"
                     a11yTitle="UTD Girls Who Code logo"
                 />
-                <Heading textAlign="center" margin="none" level={2} color="black">{isMobile ? "UTD GWC" : "UTD Girls Who Code"}</Heading>
+                <Heading textAlign="center" margin="none" level={1} size="small" color="black">{isMobile ? "UTD GWC" : "UTD Girls Who Code"}</Heading>
             </Box>
             <Box fill="vertical" flex="grow">
                 <Box basis="1/4" direction="row" justify="between" align="center" margin={{ vertical: "small", horizontal: "medium" }}>
