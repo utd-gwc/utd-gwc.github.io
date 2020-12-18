@@ -39,9 +39,9 @@ function getMenuLinksArr(isLightMode, isExpanded) {
 }
 
 export default function NavBar({ scrollTop, isLightMode, setIsLightMode }) {
-    const SCROLL_TOP_THRESHOLD = 20
-    const isExpanded = scrollTop < SCROLL_TOP_THRESHOLD
     const size = React.useContext(ResponsiveContext)
+    const SCROLL_TOP_THRESHOLD = 20
+    const isExpanded = size === 'small' ? false : scrollTop < SCROLL_TOP_THRESHOLD
     const menuLinks = getMenuLinksArr(isLightMode, isExpanded)
     return (
         <Header
