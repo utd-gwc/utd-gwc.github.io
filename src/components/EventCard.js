@@ -9,15 +9,17 @@ import {
   Box,
   Text,
   Image,
-  Menu
+  Menu,
+  ResponsiveContext
 } from "grommet";
 import ReactCardFlip from 'react-card-flip'
 import * as Icons from "grommet-icons";
 import { createEvent } from 'ics'
 
 function CardFramework({ children }) {
+  const size = React.useContext(ResponsiveContext)
   return (
-    <Card height="medium" margin="medium" width="medium" background="card-background" elevation="medium" round="medium" flex="grow" pad="none" align="center" alignSelf="center">
+    <Card height="medium" margin="medium" width={size === 'small' ? 'auto' : "medium"} background="card-background" elevation="medium" round="medium" flex="grow" pad="none" align="center" alignSelf="center">
       {children}
     </Card>
   )
