@@ -29,7 +29,7 @@ export default function AboutSection(props) {
                     </Box>
                 </Box>
                 <Box fill="horizontal" align="center" margin={{ bottom: "none" }}>
-                    <Heading level={4}>
+                    <Heading level={4} textAlign="center">
                         Learn more about GWC from its founders!
                     </Heading>
                     <Button size="medium" secondary outlined label="Learn More" href="https://girlswhocode.com/" />
