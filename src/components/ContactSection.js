@@ -36,7 +36,7 @@ export default function ContactSection({ isLightMode }) {
         },
         {
             title: "Discord",
-            url: "https://discord.gg/JSyy29F7hY",
+            url: "https://discord.gg/Jr232TyeB7",
             src: Discord,
         },
         {
